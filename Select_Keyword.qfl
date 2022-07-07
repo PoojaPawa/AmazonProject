@@ -1,0 +1,109 @@
+﻿ Function ExecuteTest(testCaseID)
+   Select Case testCaseID
+    Case "TC_001"
+         services.StartTransaction"TC_001"
+         Environment.Value("Result")= TC_01()
+         services.EndTransaction"TC_001"
+         
+         
+      Case"TC_002"
+           Services.StartTransaction"TC_002"
+           Environment.Value("Result")=TC_02()
+           services.EndTransaction"TC_002"
+           
+     Case"TC_003"
+           Services.StartTransaction"TC_003"
+           Environment.Value("Result")=TC_03()
+           Services.EndTransaction"TC_003"
+          
+     Case"TC_004"
+           Services.StartTransaction"TC_004"
+           Environment.Value("Result")= TC_04()
+           Services.EndTransaction"TC_004"
+           
+      Case"TC_005"
+           Services.StartTransaction"TC_005"
+           Environment.Value("Result")= TC_05()
+           Services.EndTransaction"TC_005"
+           
+       Case"TC_006"
+           Services.StartTransaction"TC_006"
+           Environment.Value("Result")= TC_06()
+           Services.EndTransaction"TC_006"
+           
+        Case"TC_007"
+           Services.StartTransaction"TC_007"
+           Environment.Value("Result")= TC_07()
+           Services.EndTransaction"TC_007"
+           
+        Case"TC_008"
+           Services.StartTransaction"TC_008"
+           Environment.Value("Result")= TC_08()
+           Services.EndTransaction"TC_008"
+           
+        Case"TC_009"
+           Services.StartTransaction"TC_009"
+           Environment.Value("Result")= TC_09()
+           Services.EndTransaction"TC_009"
+           
+        Case"TC_0010"
+           Services.StartTransaction"TC_010"
+           Environment.Value("Result")= TC_10()
+           Services.EndTransaction"TC_010"
+           
+        Case"TC_011"
+           Services.StartTransaction"TC_011"
+           Environment.Value("Result")= HomeKitchen()
+           Services.EndTransaction"TC_011"
+           
+        Case"TC_012"
+           Services.StartTransaction"TC_012"
+           Environment.Value("Result")= Inverter()
+           Services.EndTransaction"TC_012"
+           
+           
+        Case"TC_013"
+           Services.StartTransaction"TC_013"
+           Environment.Value("Result")= Lighting()
+           Services.EndTransaction"TC_013"
+           
+        Case"TC_014"
+           Services.StartTransaction"TC_014"
+           Environment.Value("Result")= PartsAndAccesories()
+           Services.EndTransaction"TC_014"
+           
+         Case"TC_015"
+           Services.StartTransaction"TC_015"
+           Environment.Value("Result")= Bookshelves()
+           Services.EndTransaction"TC_015"
+           
+         Case"TC_016"
+           Services.StartTransaction"TC_016"
+           Environment.Value("Result")= HomeFurnishing()
+           Services.EndTransaction"TC_016"
+           
+        Case"TC_017"
+           Services.StartTransaction"TC_017"
+           Environment.Value("Result")= Dishwashers()
+           Services.EndTransaction"TC_017"
+           
+       Case"TC_018"
+           Services.StartTransaction"TC_018"
+           Environment.Value("Result")= VaccumCI()
+           Services.EndTransaction"TC_018"
+           
+        Case"TC_019"
+           Services.StartTransaction"TC_019"
+           Environment.Value("Result")= VacAndFloorC()
+           Services.EndTransaction"TC_019"
+           
+        Case"TC_020"
+           Services.StartTransaction"TC_020"
+           Environment.Value("Result")= SofaSets()
+           Services.EndTransaction"TC_020"
+       
+           
+              End Select
+            End Function
+            
+            

@@ -1,0 +1,203 @@
+﻿
+'Function SignIn()
+'Browser(browserObject).Page(pageObject).Link("innertext:=Hello, Sign in Account & Lists").Click
+'Browser(browserObject).Page(pageObject).WebEdit("html id:=ap_email").Set "919527190439"
+'Browser(browserObject).Page(pageObject).WebButton("html id:=continue").Click
+'Browser(browserObject).Page(pageObject).WebEdit("html id:=ap_password").SetSecure "62c3e8b46306872a491a49a931e25d775c80dbac2a77601c"
+'Browser(browserObject).Page(pageObject).WebButton("html id:=signInSubmit").Click
+'End Function
+'
+'Function SignOut()
+'Browser("Browser_3").Navigate "https://www.amazon.in/"
+'Browser(browserObject).Page(pageObject).Link("html id:=nav-link-accountList").FireEvent("OnMouseOver")
+'Browser(browserObject).Page(pageObject).WebElement("xpath:=//A[@id='nav-item-signout']/SPAN[normalize-space()='Sign Out']").Click
+'End Function
+'
+
+Function HomeKitchen()
+
+Dim searchString,res1
+searchString="Buy products across Home,Kitch"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").WebElement("Buy products across Home,Kitch").GetROProperty("text")
+
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"TC_01","Pass"
+Else
+	Reporter.ReportEvent miccPass,"TC_01","Fail"
+End If
+End Function
+
+
+Function Inverter()
+	
+Dim searchString,res1
+searchString="Inverters_3"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Kitchen & Home Appliances").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Inverters").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").WebElement("Inverters_3").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyInverters","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyInverters","Fail"
+End If
+End Function
+
+
+Function Lighting()
+	
+ Dim searchString,res1
+searchString="Lighting "
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Lighting").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_2").WebElement("Lighting").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyLighting ","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyLighting ","Fail"
+End If
+End Function
+
+
+
+Function PartsAndAccesories()
+	
+Dim searchString,res1
+searchString="Parts & Accessories"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Large Appliances").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Parts & Accessories").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").WebElement("Parts & Accessories").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyAccessories","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyAccessories","Fail"
+End If
+End Function
+
+
+Function Bookshelves()
+	
+Dim searchString,res1
+searchString="Bookshelves_2"
+
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Furniture").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Bookshelves").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_2").WebElement("Bookshelves_2").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyBookshelves","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyBookshelves","Fail"
+End If
+End Function
+
+
+
+Function HomeFurnishing()
+	
+Dim searchString,res1
+searchString="Home Furnishing_3"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+'Browser("Browser_3").Page("Online Shopping site in").WebElement("nav-search-label-id").Click
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Home Furnishing").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").WebElement("Home Furnishing_3").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyHF","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyHF","Fail"
+End If
+End Function
+
+
+
+Function Dishwashers()
+	
+Dim searchString,res1
+searchString="Dishwashers_2"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Large Appliances").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Dishwashers_2").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").WebElement("Dishwashers_2").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyDishwashers","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyDishwashers","Fail"
+End If
+End Function
+
+
+
+Function VaccumCI()
+	
+Dim searchString,res1
+searchString="Vacuum, Cleaning & Ironing_2"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Kitchen & Home Appliances").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Vacuum, Cleaning & Ironing").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").WebElement("Vacuum, Cleaning & Ironing_2").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyHF","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyHF","Fail"
+End If
+End Function
+
+
+
+Function VacAndFloorC()
+	
+Dim searchString,res1
+searchString="Vacuums & Floor Care_4"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Kitchen & Home Appliances").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Vacuum, Cleaning & Ironing").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").Link("Vacuums & Floor Care").Click
+Browser("Browser_3").Page("Appliance Parts & Accessories:").WebElement("Vacuums & Floor Care_4").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifyVacuumsFloorCare","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifyVacuumsFloorCare","Fail"
+End If
+End Function
+
+
+
+Function SofaSets()
+	
+Dim searchString,res1
+searchString="Sofa Set_2"
+Browser("Browser_3").Navigate "https://www.amazon.in/"
+Browser("Browser_3").Page("Online Shopping site in").WebList("url").Select "Home & Kitchen"
+Browser("Browser_3").Page("Online Shopping site in").WebButton("Go").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_3").Link("Furniture").Click
+Browser("Browser_3").Page("Buy Large Appliances Online").Link("Sofa Sets").Click
+Browser("Browser_3").Page("Home Store: Buy Home &_2").WebElement("Sofa Set_2").GetROProperty("text")
+If inStr(searchString,res1)>=0 Then
+	Reporter.ReportEvent miccPass,"verifySofaSets","Pass"
+Else
+	Reporter.ReportEvent miccPass,"verifySofaSets","Fail"
+End If
+End Function
+
+
+
+

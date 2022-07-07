@@ -1,0 +1,66 @@
+﻿Set browserObject = Description.Create  
+browserObject("creationtime").value="0"
+
+Set pageObject = Description.Create
+pageObject("micclass").value ="Page"
+
+Set HAndKDropdownBox = Description.Create
+HAndKDropdownBox("html id").value ="searchDropdownBox"
+
+Set Go = Description.Create
+Go("name").value ="Go"
+
+Set HomeAndKitchen=  Description.Create  
+HomeAndKitchen("innerhtml").value="Home &amp; Kitchen"
+
+Set Checkpoint01=  Description.Create
+Checkpoint01("innerhtml").value="Home &amp; Kitchen"
+
+Set HAndkAppliances =  Description.Create
+HAndkAppliances("innerhtml").value="Kitchen &amp; Home Appliances"
+
+Set Inverter  = Description.Create
+Inverter("innerhtml").value="Inverters"
+
+Set Checkpoint02 =  Description.Create
+Checkpoint02("innerhtml").value="Inverters"
+
+Set Lighting  = Description.Create
+Inverter("xpath").value="//DIV[@id='a-page']/DIV[2]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/UL[2]/LI[8]/A[1]"
+
+Set Checkpoint03 =  Description.Create
+Checkpoint03("xpath").value="//DIV/DIV[normalize-space()='Lighting']/SPAN[1]"
+
+Set LargeAppliances =  Description.Create
+LargeAppliances("xpath").value="//DIV[@id='nav-subnav']/A[3]/SPAN[1]"
+
+Set PartsAndAccessories =  Description.Create
+PartsAndAccessories("innerhtml").value="Parts &amp; Accessories"
+
+Set Checkpoint04 =  Description.Create
+Checkpoint04("xpath").value="//LI/SPAN[normalize-space()='Parts & Accessories']/SPAN[1]"
+
+Set Furniture =  Description.Create
+Furniture("xpath").value="//DIV[@id='nav-subnav']/A[5]/SPAN[1]"
+
+Set Bookshelves =  Description.Create
+Bookshelves("xpath").value="//DIV[@id='a-page']/DIV[2]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/UL[2]/LI[6]/A[1]"
+
+Set Checkpoint05 =  Description.Create
+Checkpoint05("xpath").value="//DIV/DIV/H1/B[normalize-space()='Bookshelves']"
+
+Set HomeFurnishing =  Description.Create
+HomeFurnishing("outerhtml").value="//DIV[@id='nav-subnav']/A[5]/SPAN<span class=""nav-a-content"">      Home Furnishing          </span>[1]"
+
+Set Checkpoint06 =  Description.Create
+Checkpoint06("xpath").value="//LI/SPAN[normalize-space()='Home Furnishing']/SPAN[1]"
+
+Set Dishwashers =  Description.Create
+Dishwashers("outerhtml").value="<span dir=""auto"">Dishwashers</span>"
+
+Set Checkpoint07 =  Description.Create
+Checkpoint07("xpath").value="//LI/SPAN[normalize-space()='Dishwashers']/SPAN[1]"
+
+Set VacuumCnI =  Description.Create
+VacuumCnI("outerhtml").value="<span dir=""auto"">Vacuum, Cleaning &amp; Ironing</span>""
+
